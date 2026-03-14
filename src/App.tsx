@@ -29,16 +29,6 @@ function App() {
           </ErrorBoundary>
         </Section>
 
-        <Section id="about-author" title="Об авторе">
-          <p className="mb-4">
-            Александр Борисович Дублин. Бизнес-аналитик и консультант. Аналитика маркетплейсов Ozon и WB, селлеры, стратегия ассортимента.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a href="https://t.me/AleksandrBorisovich73" target="_blank" rel="noopener noreferrer" className="text-[#E53935] hover:underline font-medium">Telegram</a>
-            <a href="https://t.me/ab_dublin" target="_blank" rel="noopener noreferrer" className="text-[#E53935] hover:underline font-medium">Telegram-канал</a>
-            <a href="https://dzen.ru/dbs_dubas" target="_blank" rel="noopener noreferrer" className="text-[#E53935] hover:underline font-medium">Блог на Дзене</a>
-          </div>
-        </Section>
       </main>
 
       <Footer />

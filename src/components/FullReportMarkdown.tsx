@@ -9,7 +9,7 @@ export function FullReportMarkdown() {
   }
   return (
     <div className="-mx-4 px-4 lg:-mx-12 lg:px-12 overflow-x-auto">
-      <article className="prose prose-lg max-w-none prose-table:text-sm prose-th:bg-gray-100 prose-th:px-3 prose-th:py-2 prose-td:px-3 prose-td:py-2 prose-blockquote:border-l-amber-500 prose-blockquote:bg-amber-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-pre:bg-gray-100 prose-pre:text-sm prose-pre:overflow-x-auto">
+      <article className="prose prose-lg max-w-none prose-table:text-sm prose-th:bg-gray-100 prose-th:px-3 prose-th:py-2 prose-td:px-3 prose-td:py-2 prose-blockquote:border-l-amber-500 prose-blockquote:bg-amber-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-pre:bg-[#0F2344] prose-pre:text-[#E8EEFF] prose-pre:border prose-pre:border-[#2C4B7A] prose-pre:shadow-md prose-pre:text-sm prose-pre:overflow-x-auto prose-code:text-inherit">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
       </article>
     </div>

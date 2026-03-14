@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { ArrowDown, BookOpen, MessageCircle } from 'lucide-react';
+import { ArrowDown, MessageCircle } from 'lucide-react';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -83,46 +83,6 @@ export function Hero() {
               </a>
             </div>
 
-            <div id="about-author" className="animate-item bg-white/10 border border-white/15 backdrop-blur-sm rounded-2xl p-5 lg:p-6">
-              <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
-                <img
-                  src={`${BASE}images/author-photo.png`}
-                  alt="Александр Борисович Дублин"
-                  className="w-24 h-24 rounded-xl object-cover border border-white/20"
-                />
-                <div>
-                  <p className="text-white text-xl font-semibold">Александр Борисович Дублин</p>
-                  <p className="text-white/80 text-sm mt-1">
-                    Бизнес-аналитик и консультант. Аналитика маркетплейсов, стратегия, ассортимент.
-                  </p>
-                  <div className="flex flex-wrap gap-3 mt-3 text-xs">
-                    <span className="px-2.5 py-1 rounded-full bg-white/10 text-white/85">Ozon Analytics</span>
-                    <span className="px-2.5 py-1 rounded-full bg-white/10 text-white/85">Селлеры</span>
-                    <span className="px-2.5 py-1 rounded-full bg-white/10 text-white/85">Мебель</span>
-                  </div>
-                  <div className="flex flex-wrap gap-3 mt-4">
-                    <a
-                      href="https://t.me/ab_dublin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-white/90 hover:text-white text-sm"
-                    >
-                      <BookOpen className="w-4 h-4" />
-                      Telegram-канал
-                    </a>
-                    <a
-                      href="https://dzen.ru/dbs_dubas"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-white/90 hover:text-white text-sm"
-                    >
-                      <BookOpen className="w-4 h-4" />
-                      Блог на Дзене
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="animate-item hidden lg:block">
