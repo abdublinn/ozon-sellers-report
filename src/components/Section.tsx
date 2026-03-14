@@ -6,9 +6,10 @@ interface SectionProps {
   subtitle?: string;
   children: React.ReactNode;
   className?: string;
+  wide?: boolean;
 }
 
-export function Section({ id, title, subtitle, children, className = '' }: SectionProps) {
+export function Section({ id, title, subtitle, children, className = '', wide }: SectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -37,7 +38,7 @@ export function Section({ id, title, subtitle, children, className = '' }: Secti
       className={`section-padding ${className}`}
     >
       <div
-        className={`container-main max-w-3xl transition-all duration-500 ${
+        className={`container-main ${wide ? 'max-w-6xl' : 'max-w-3xl'} transition-all duration-500 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
         }`}
       >

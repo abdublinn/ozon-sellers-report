@@ -2,17 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Предисловие', href: '#preface' },
-  { label: '1. Объём', href: '#block1' },
-  { label: '2. Цены', href: '#block2' },
-  { label: '3. Качество', href: '#block3' },
-  { label: '4. Видимость', href: '#block4' },
-  { label: '5. Реклама', href: '#block5' },
-  { label: '9. Матрица', href: '#block9' },
-  { label: '10. Портреты', href: '#block10' },
-  { label: '11. Концентрация', href: '#block11' },
-  { label: 'Ограничения', href: '#limitations' },
-  { label: 'Полный отчёт 100%', href: '#full-report' },
+  { label: 'Полный отчёт', href: '#full-report' },
   { label: 'Об авторе', href: '#about-author' },
 ];
 
