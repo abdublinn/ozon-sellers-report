@@ -37,7 +37,7 @@ export function Hero() {
   };
 
   return (
-    <section ref={heroRef} className="relative min-h-screen pt-20 pb-14 overflow-hidden bg-[#0F2344]">
+    <section ref={heroRef} className="relative pt-20 pb-10 overflow-hidden bg-[#0F2344]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(70,110,180,.35),transparent_45%),radial-gradient(circle_at_90%_15%,rgba(80,120,200,.25),transparent_40%)]" />
       <div className="absolute -left-32 top-1/2 h-px w-[160%] -translate-y-24 rotate-[-18deg] bg-white/10" />
       <div className="absolute -left-32 top-1/2 h-px w-[160%] translate-y-24 rotate-[-18deg] bg-white/10" />
@@ -53,18 +53,16 @@ export function Hero() {
             </div>
 
             <h1 className="animate-item text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
-              Лидеры мебельного
+              <span className="text-[#F59E0B]">Анатомия</span> мебельного
               <br />
-              рынка <span className="text-[#F59E0B]">Ozon</span>:
-              <br />
-              полный разбор шести селлеров
+              <span className="text-[#F59E0B]">Ozon</span>
             </h1>
 
-            <p className="animate-item text-lg sm:text-xl text-white/80 mb-8 max-w-2xl">
+            <p className="animate-item text-lg sm:text-xl text-white/80 mb-6 max-w-2xl">
               Объём, цены, видимость, реклама, концентрация продаж — данные за 28 дней, выводы для стратегии.
             </p>
 
-            <div className="animate-item flex flex-wrap items-center gap-4 mb-10">
+            <div className="animate-item flex flex-wrap items-center gap-4">
               <button
                 onClick={scrollToContent}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] text-white font-semibold rounded-lg hover:bg-amber-500 transition-all hover:scale-[1.02] active:scale-[0.98]"
