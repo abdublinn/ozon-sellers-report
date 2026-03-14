@@ -37,7 +37,7 @@ export function Hero() {
   };
 
   return (
-    <section ref={heroRef} className="relative pt-20 pb-10 overflow-hidden bg-[#0F2344]">
+    <section ref={heroRef} id="hero" className="relative pt-20 pb-10 overflow-hidden bg-[#0F2344]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(70,110,180,.35),transparent_45%),radial-gradient(circle_at_90%_15%,rgba(80,120,200,.25),transparent_40%)]" />
       <div className="absolute -left-32 top-1/2 h-px w-[160%] -translate-y-24 rotate-[-18deg] bg-white/10" />
       <div className="absolute -left-32 top-1/2 h-px w-[160%] translate-y-24 rotate-[-18deg] bg-white/10" />

@@ -29,6 +29,7 @@ export function Quote({ children }: QuoteProps) {
   return (
     <div
       ref={ref}
+      id="quote"
       className={`py-8 lg:py-10 transition-all duration-500 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
       }`}
