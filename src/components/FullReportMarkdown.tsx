@@ -8,8 +8,8 @@ export function FullReportMarkdown() {
     return <p className="text-[#6B6B6B]">Загрузка полного отчёта...</p>;
   }
   return (
-    <div className="overflow-x-auto -mx-4 px-4 lg:-mx-12 lg:px-12">
-      <article className="prose prose-lg max-w-none prose-table:text-sm prose-th:bg-gray-100 prose-th:px-3 prose-th:py-2 prose-td:px-3 prose-td:py-2 prose-blockquote:border-l-amber-500 prose-blockquote:bg-amber-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-pre:bg-gray-100 prose-pre:text-sm min-w-0">
+    <div className="overflow-x-auto -mx-4 px-4 lg:-mx-12 lg:px-12 table-scroll">
+      <article className="prose prose-lg max-w-none w-max min-w-full prose-table:text-sm prose-th:bg-gray-100 prose-th:px-3 prose-th:py-2 prose-td:px-3 prose-td:py-2 prose-blockquote:border-l-amber-500 prose-blockquote:bg-amber-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-pre:bg-gray-100 prose-pre:text-sm prose-pre:overflow-x-auto [&_table]:min-w-max">
       <ReactMarkdown remarkPlugins={[remarkGfm]}>
         {content}
       </ReactMarkdown>
