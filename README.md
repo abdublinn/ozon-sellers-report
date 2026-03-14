@@ -17,27 +17,21 @@ npm run build
 
 ## Деплой на GitHub Pages
 
-1. Создайте репозиторий на GitHub (например `ozon-sellers-report`).
-2. Инициализируйте git в папке `app`:
+Деплой через **GitHub Actions** — сборка выполняется на серверах GitHub, Node.js локально не нужен.
+
+1. Запушьте изменения (включая `.github/workflows/deploy.yml`):
 
 ```bash
-cd app
-git init
 git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/abdublinn/ozon-sellers-report.git
-git push -u origin main
+git commit -m "Add GitHub Actions deploy"
+git push
 ```
 
-3. Установите gh-pages и задеплойте:
+2. В настройках: **Settings → Pages → Source: GitHub Actions** (вместо "Deploy from a branch")
 
-```bash
-npm install
-npm run deploy
-```
+После каждого `git push` в ветку master сайт будет собираться и публиковаться автоматически.
 
-Сайт будет доступен по адресу `https://abdublinn.github.io/ozon-sellers-report/`.
+URL: `https://abdublinn.github.io/ozon-sellers-report/`
 
 ## Структура
 

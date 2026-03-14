@@ -4,7 +4,8 @@ import { defineConfig } from "vite"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/ozon-sellers-report/',
+  build: { outDir: 'docs' },
   plugins: [react()],
   resolve: {
     alias: {
