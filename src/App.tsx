@@ -1,5 +1,6 @@
 import { Navigation } from './components/Navigation';
 import { FullReportMarkdown } from './components/FullReportMarkdown';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { Hero } from './sections/Hero';
 import { Quote } from './sections/Quote';
 import { Section } from './components/Section';
@@ -23,7 +24,9 @@ function App() {
           <p className="mb-6">
             Ниже полный текст отчёта — все блоки, таблицы и инсайты без сокращений.
           </p>
-          <FullReportMarkdown />
+          <ErrorBoundary>
+            <FullReportMarkdown />
+          </ErrorBoundary>
         </Section>
 
         <Section id="about-author" title="Об авторе">
