@@ -1,9 +1,19 @@
+import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import reportContent from '@/content/report.md?raw';
+
+const REPORT_URL = `${import.meta.env.BASE_URL}ozon_sellers_fullmetrics_march2026.md`;
 
 export function FullReportMarkdown() {
-  const content = typeof reportContent === 'string' ? reportContent : '';
+  const [content, setContent] = useState('');
+
+  useEffect(() => {
+    fetch(REPORT_URL)
+      .then((res) => res.text())
+      .then(setContent)
+      .catch(() => setContent(''));
+  }, []);
+
   if (!content) {
     return <p className="text-[#6B6B6B]">Загрузка полного отчёта...</p>;
   }
