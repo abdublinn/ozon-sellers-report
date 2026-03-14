@@ -12,6 +12,7 @@ const navLinks = [
   { label: '10. Портреты', href: '#block10' },
   { label: '11. Концентрация', href: '#block11' },
   { label: 'Ограничения', href: '#limitations' },
+  { label: 'Полный отчёт 100%', href: '#full-report' },
   { label: 'Об авторе', href: '#about-author' },
 ];
 

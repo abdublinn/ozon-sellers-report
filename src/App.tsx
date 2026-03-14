@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Navigation } from './components/Navigation';
 import { Hero } from './sections/Hero';
 import { Quote } from './sections/Quote';
@@ -87,6 +88,16 @@ const matrixData = [
 ];
 
 function App() {
+  const [fullReportText, setFullReportText] = useState('');
+
+  useEffect(() => {
+    const reportPath = `${import.meta.env.BASE_URL}ozon_sellers_fullmetrics_march2026.md`;
+    fetch(reportPath)
+      .then((response) => response.text())
+      .then((text) => setFullReportText(text))
+      .catch(() => setFullReportText('Не удалось загрузить полный текст отчёта.'));
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -219,6 +230,23 @@ function App() {
           <p className="mb-4">
             Период: 14.02–14.03.2026 (28 дней). Данные: Ozon Analytics. Брутто включает отмены и возвраты. Маржинальность, внешние каналы и доля soffinancing Ozon в скидках — за рамками отчёта.
           </p>
+        </Section>
+
+        <Section id="full-report" title="Полный отчёт (100%)">
+          <p className="mb-4">
+            Ниже опубликован полный исходный текст отчёта без сокращений.
+          </p>
+          <a
+            href={`${import.meta.env.BASE_URL}ozon_sellers_fullmetrics_march2026.md`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-4 py-2 mb-4 rounded-lg border border-[#E53935] text-[#E53935] hover:bg-red-50 transition-colors text-sm font-medium"
+          >
+            Открыть markdown в отдельной вкладке
+          </a>
+          <pre className="text-xs leading-relaxed bg-[#F8FAFC] border border-gray-200 rounded-lg p-4 overflow-x-auto whitespace-pre">
+            {fullReportText || 'Загрузка полного отчёта...'}
+          </pre>
         </Section>
 
         <Section id="about-author" title="Об авторе">
